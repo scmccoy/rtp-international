@@ -9,7 +9,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import styled from 'styled-components'
 import Header from './header'
+import Navigation from './navigation'
 import './layout.css'
 
 const Layout = ({ children }) => {
@@ -27,17 +29,11 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
+      <Navigation />
+      <MainWrapper>
         <main>{children}</main>
-        <footer>© {new Date().getFullYear()}, Built with coffee...</footer>
-      </div>
+        <footer>© {new Date().getFullYear()} powered with coffee...</footer>
+      </MainWrapper>
     </>
   )
 }
@@ -45,5 +41,12 @@ const Layout = ({ children }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
+
+const MainWrapper = styled.div`
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0px 1.0875rem 1.45rem;
+  padding-top: 1rem;
+`
 
 export default Layout
