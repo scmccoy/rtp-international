@@ -12,7 +12,7 @@ const IndexPage = () => (
     <ImageWrapper>
       <ImagePunkTurtle />
     </ImageWrapper>
-    <CassetteLayout />
+    {/* <CassetteLayout /> */}
   </Layout>
 )
 

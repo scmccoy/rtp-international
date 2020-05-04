@@ -13,11 +13,9 @@ const Navigation = () => (
 
 const Wrapper = styled.div`
   background: #000;
-  position: absolute;
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  top: 8.5rem;
 `
 const LinkTo = styled.div`
   font-size: 2rem;
