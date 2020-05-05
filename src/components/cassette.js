@@ -32,11 +32,18 @@ const Cassette = ({ title }) => (
 const Container = styled.div`
   display: flex;
   height: 100%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 30rem;
+  @media (max-width: 768px) {
+    align-items: center;
+  }
 `
 const Title = styled.p`
   font-size: 2rem;
@@ -54,6 +61,10 @@ const ImageWrapper = styled.div`
   width: 100%;
   height: 100%;
   justify-content: space-evenly;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 const ImageCoverWrapper = styled.div`
   display: flex;
