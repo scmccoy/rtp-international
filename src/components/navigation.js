@@ -7,7 +7,9 @@ const Navigation = () => (
     <LinkTo>
       <Link to="/contact/">Contact</Link>
     </LinkTo>
-    {/* <LinkTo>About</LinkTo> */}
+    <LinkTo>
+      <Link to="/order/">Order</Link>
+    </LinkTo>
   </Wrapper>
 )
 
